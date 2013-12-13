@@ -56,7 +56,7 @@ class MonkeyPaw < Thor
     end
   end
 
-  no_commands {
+no_commands {
 def rack_toplevel(name)
 <<-RACK_TOPLEVEL
 require 'rack/#{name}'
@@ -181,7 +181,5 @@ end
 }
 
 end
-
-
 
 MonkeyPaw.start

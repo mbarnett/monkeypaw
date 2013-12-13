@@ -1,7 +1,7 @@
 Monkey Paw
 ==========
 
-Hold The Paw And Make a Wish
+Hold the Paw and Make a Wish
 ----------------------------
 
 Right now, the only thing the paw will do for you is make a dummy Rack middleware
