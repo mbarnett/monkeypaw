@@ -86,7 +86,12 @@ module Rack
       @app = app
     end
 
+    # dup the middleware instance for thread safety
     def call(env)
+      dup._call(env)
+    end
+
+    def _call(env)
       @status, @headers, @body = @app.call(env)
 
       # simple pass-through
@@ -133,7 +138,7 @@ Gem::Specification.new do |s|
   s.version = File.read('VERSION')
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Fakey McFakerson"]
+  s.authors = ["Fakey Fakename"]
   s.date = Date.today.to_s
   s.description = %q{A rack middleware for <insert description here>}
   s.summary = %q{A rack middleware for <insert summary>}
