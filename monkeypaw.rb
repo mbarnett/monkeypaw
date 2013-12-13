@@ -176,6 +176,8 @@ end
         create_file "rack-#{name}.gemspec" do
           gemspec(name)
         end
+
+        run 'git init'
       end
     end
 end
